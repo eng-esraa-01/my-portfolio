@@ -14,6 +14,7 @@ import {
   Layers,
   Code2,
   GraduationCap,
+  BriefcaseBusiness,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -242,9 +243,10 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
               {/* Floating Overlays */}
-              <div className="absolute top-4 start-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5 shadow-2xs">
-                <GraduationCap className="w-3.5 h-3.5 text-[#465E59] dark:text-[#a3bfb9]" />
-                <span>{isAr ? 'دفعة حاسبات 2024' : 'CS Class of 2024'}</span>
+              <div className="absolute top-4 start-4 inline-flex items-center gap-1.5 whitespace-nowrap rounded-xl border border-[#465E59]/20 bg-white/95 px-2.5 py-1.5 text-xs shadow-sm backdrop-blur-md dark:border-[#a3bfb9]/25 dark:bg-slate-900/95">
+                <BriefcaseBusiness aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-[#465E59] dark:text-[#a3bfb9]" />
+                <span className="font-extrabold text-[#465E59] dark:text-[#a3bfb9]" dir="ltr">3+</span>
+                <span className="font-semibold text-slate-600 dark:text-slate-300">{isAr ? 'سنوات خبرة' : 'Years of Experience'}</span>
               </div>
 
               <div className="absolute bottom-4 start-4 end-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-3 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 shadow-sm flex items-center justify-between">
