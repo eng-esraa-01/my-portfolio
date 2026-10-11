@@ -14,7 +14,6 @@ import {
   Layers,
   Code2,
   GraduationCap,
-  Sparkles,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -213,12 +212,21 @@ export function Hero() {
           </div>
 
           {/* Portrait Column */}
-          <div className="lg:col-span-5 relative flex justify-center">
+          <div className="lg:col-span-5 relative flex justify-center px-3 sm:px-5 py-5">
+            <div className="relative isolate w-full max-w-sm sm:max-w-md">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 translate-x-3 translate-y-3 sm:translate-x-5 sm:translate-y-5 rotate-3 rounded-[2rem] bg-gradient-to-br from-[#719990] via-[#465E59] to-[#2d3e3a] dark:from-[#88b0a7] dark:via-[#57746e] dark:to-[#394d49] shadow-xl shadow-[#465E59]/20"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -inset-2 -rotate-3 rounded-[2rem] border border-[#719990]/30 dark:border-[#a3bfb9]/25 pointer-events-none"
+              />
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.45 }}
-              className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-3xl overflow-hidden border-2 border-[#465E59]/30 dark:border-[#465E59]/40 bg-slate-100 dark:bg-slate-900 shadow-xl shadow-[#465E59]/10"
+              className="relative z-10 w-full aspect-square rounded-3xl overflow-hidden border-2 border-white/70 dark:border-slate-700 bg-slate-100 dark:bg-slate-900 shadow-xl shadow-[#465E59]/15"
             >
               <Image
                 src={PROFILE_INFO.avatarImage}
@@ -235,7 +243,7 @@ export function Hero() {
 
               {/* Floating Overlays */}
               <div className="absolute top-4 start-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5 shadow-2xs">
-                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                <GraduationCap className="w-3.5 h-3.5 text-[#465E59] dark:text-[#a3bfb9]" />
                 <span>{isAr ? 'دفعة حاسبات 2024' : 'CS Class of 2024'}</span>
               </div>
 
@@ -246,6 +254,7 @@ export function Hero() {
                 </div>
               </div>
             </motion.div>
+            </div>
           </div>
         </div>
       </div>
